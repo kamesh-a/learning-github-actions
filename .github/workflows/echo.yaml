@@ -44,3 +44,11 @@ jobs:
             echo ${{ github.workflow }}
             echo ${{ github.workspace }}
             echo ${{ github.event }}
+
+
+      - name: Print all varialbes in runner context
+        run: |
+            echo ${{ runner.os }}
+            echo ${{ runner.arch }}
+            echo ${{ runner.temp }}
+            echo ${{ runner.workspace }}
