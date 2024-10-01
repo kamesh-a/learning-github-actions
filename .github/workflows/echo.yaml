@@ -30,3 +30,17 @@ jobs:
       - name: Print directory inside
         run: |
           ls -al
+
+      - name: Print all varialbes in github context
+        run: |
+            echo ${{ github.repository }}
+            echo ${{ github.repository_owner }}
+            echo ${{ github.event_name }}
+            echo ${{ github.ref }}
+            echo ${{ github.sha }}
+            echo ${{ github.run_id }}
+            echo ${{ github.run_number }}
+            echo ${{ github.actor }}
+            echo ${{ github.workflow }}
+            echo ${{ github.workspace }}
+            echo ${{ github.event }}
