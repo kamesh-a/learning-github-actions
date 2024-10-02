@@ -57,9 +57,3 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-
-      # Step 6: Update deployment.yaml with the SHA
-      - name: Update deployment.yaml with SHA
-        run: |
-          EXISTING_IMAGE_NAME=$(awk '/image:/{print $2}' ./k8s-manifest/deployment.yaml)
-          sed -i "s|${EXISTING_IMAGE_NAME}|ghcr.io/kamesh-a/learning-github-actions:${{ github.sha }}|g" ./k8s-manifest/deployment.yaml
