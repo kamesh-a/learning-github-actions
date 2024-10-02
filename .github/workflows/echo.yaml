@@ -15,13 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Downloading the code from repository
+      # Download the code from repository
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       # Print "Hello, World!" to the log
       - name: Print Message
-        shell: bash
         run: echo "Hello, World Madhu!"
 
       - name: Print workspace
