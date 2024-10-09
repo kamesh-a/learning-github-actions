@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.get('/')
 def index():
-    return 'Hello, Welcome to Python flask Server!'
+    return 'Hi, Welcome to Python flask Server!'
 
 @app.get('/student/<name>')
 def get_student(name):
